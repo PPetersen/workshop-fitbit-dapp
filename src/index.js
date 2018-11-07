@@ -2,10 +2,10 @@
 // 1. make test account: https://www.fitbit.com/signup
 // 2. signup as dev: https://dev.fitbit.com/login
 // 3. register app: https://dev.fitbit.com/apps/new
-const CLIENT_ID = '22D5DZ';
+const CLIENT_ID = '22D5BQ';
 // @NOTE only works if `https://dev.fitbit.com/apps/details/${CLIENT_ID}` has set Callback URL to `location.href` too
 const REDIRECT_URL = location.href.split('#')[0].split('?')[0]
-const DEFAULT_ADDRESS = "0xa35f44a199015081d86da841ba8e14ece52e840c";
+const DEFAULT_ADDRESS = "0x5cc9d29c4821c70ba47d03d50f7ba04e0a41597a";
 const contractAddress = localStorage.contract || DEFAULT_ADDRESS;
 const CONTRACT_GAS = 800000;
 const CONTRACT_PRICE = 40000000000;
@@ -46,7 +46,9 @@ const bel = require('bel')
 const csjs = require('csjs-inject')
 
 var ABI = require('./abi.json');
-var Web3 = require('web3');
+
+//var ABI = require('./abi.json');
+
 
 
 async function web3Init() {
